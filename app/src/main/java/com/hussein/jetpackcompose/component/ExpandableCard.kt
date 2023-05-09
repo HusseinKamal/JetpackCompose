@@ -1,4 +1,4 @@
-package com.hussein.jetpackcompose
+package com.hussein.jetpackcompose.component
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing

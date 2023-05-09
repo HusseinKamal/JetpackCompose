@@ -21,12 +21,10 @@ import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.ParagraphStyle
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
@@ -44,16 +42,13 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImagePainter
-import coil.compose.ImagePainter
 import coil.compose.rememberAsyncImagePainter
-import coil.compose.rememberImagePainter
 import coil.request.ImageRequest
 import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
+import com.hussein.jetpackcompose.component.CustomProgressComponent
 import com.hussein.jetpackcompose.ui.theme.JetpackComposeTheme
 import com.hussein.jetpackcompose.ui.theme.Typography
-import com.hussein.jetpackcompose.ui.theme.color1
-import com.hussein.jetpackcompose.ui.theme.color2
 
 class MainActivity : ComponentActivity() {
     @ExperimentalMaterialApi

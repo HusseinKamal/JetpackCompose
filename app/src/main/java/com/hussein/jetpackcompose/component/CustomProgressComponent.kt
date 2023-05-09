@@ -1,6 +1,5 @@
-package com.hussein.jetpackcompose
+package com.hussein.jetpackcompose.component
 
-import androidx.compose.animation.Animatable
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.animateIntAsState

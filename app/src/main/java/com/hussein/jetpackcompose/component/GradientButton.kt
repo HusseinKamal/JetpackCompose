@@ -1,5 +1,4 @@
-package com.hussein.jetpackcompose
-
+package com.hussein.jetpackcompose.component
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues

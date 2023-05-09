@@ -1,5 +1,4 @@
-package com.hussein.jetpackcompose
-
+package com.hussein.jetpackcompose.component
 import androidx.compose.animation.animateContentSize
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.tween
@@ -17,6 +16,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
+import com.hussein.jetpackcompose.R
 import com.hussein.jetpackcompose.ui.theme.Shapes
 
 @ExperimentalMaterialApi
