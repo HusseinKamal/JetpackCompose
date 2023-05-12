@@ -5,6 +5,7 @@ package com.hussein.jetpackcompose
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -41,21 +42,35 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImagePainter
 import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.hussein.jetpackcompose.component.AnimatedShimmer
+import com.hussein.jetpackcompose.component.CircularImage
 import com.hussein.jetpackcompose.component.CustomProgressComponent
+import com.hussein.jetpackcompose.component.SetupNavGraph
+import com.hussein.jetpackcompose.search.MainViewModel
+import com.hussein.jetpackcompose.search.SearchMainScreen
 import com.hussein.jetpackcompose.ui.theme.JetpackComposeTheme
+import com.hussein.jetpackcompose.ui.theme.Teal200
 import com.hussein.jetpackcompose.ui.theme.Typography
 
 class MainActivity : ComponentActivity() {
+
+    lateinit var navHostControl: NavHostController
+
+    private val mainViewModel:MainViewModel by viewModels()
+
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            JetpackComposeTheme {
+            JetpackComposeTheme { //JetpackComposeTheme -->Compose of AppName+"Theme" word
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
@@ -65,7 +80,7 @@ class MainActivity : ComponentActivity() {
                         Greeting("Android")
                         CustomText(text = "Hussein Kamal")
                     }*/
-                   /* Column(modifier = Modifier
+                    /* Column(modifier = Modifier
                         .fillMaxSize()
                         .width(500.dp)
                         .height(500.dp)
@@ -75,7 +90,7 @@ class MainActivity : ComponentActivity() {
                         CustomItem(weight = 3f, color =MaterialTheme.colors.primary)
                         CustomItem(weight = 1f, color =MaterialTheme.colors.secondary)
                     }*/
-                   /* Row(modifier = Modifier.fillMaxSize(),
+                    /* Row(modifier = Modifier.fillMaxSize(),
                         horizontalArrangement = Arrangement.Start,
                         //verticalArrangement = Arrangement.SpaceBetween
                     ) {
@@ -88,18 +103,42 @@ class MainActivity : ComponentActivity() {
                     //GoogleButton(onClicked = {})
                     //PasswordField()
 
-                   /* GradientButton(text = "My Button", textColor = Color.White, gradient = Brush.horizontalGradient(
+                    /* GradientButton(text = "My Button", textColor = Color.White, gradient = Brush.horizontalGradient(
                         colors = listOf(color1,color2)
                     )) {
                     }*/
                     //CountLimitTextFieldComposable()
-                    CustomProgressComposeExample()
+                    //CustomProgressComposeExample()
+
+                   /* navHostControl = rememberNavController()
+                    SetupNavGraph(navHostController = navHostControl)*/
+
+                    //MainScreen()
+                    //SearchMainScreen(viewModel = mainViewModel)
+
+                   /* Column {
+                        repeat(6){
+                            AnimatedShimmer()
+                        }
+                    }*/
+                   /* Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
+                        CircularImage()
+                    }*/
                 }
+
+                //Change system bar colors
+                /*   val system = rememberSystemUiController()
+                   val darkTheme= isSystemInDarkTheme()
+                   SideEffect {
+                       system.setSystemBarsColor(
+                           color = if(darkTheme) Color.LightGray else Teal200
+                       )
+                   }*/
+
             }
         }
     }
 }
-
 
 @Composable
 fun Greeting(name: String) {
