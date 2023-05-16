@@ -57,6 +57,8 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.hussein.jetpackcompose.OnboardingApp.navigation.SetupNavGraphOnboarding
 import com.hussein.jetpackcompose.OnboardingApp.viewmodel.SplashViewModel
 import com.hussein.jetpackcompose.component.CustomProgressComponent
+import com.hussein.jetpackcompose.component.LoadingAnimation
+import com.hussein.jetpackcompose.component.SelectableItem
 import com.hussein.jetpackcompose.pagingapp.navigation.NavGraphPaging
 import com.hussein.jetpackcompose.search.MainViewModel
 import com.hussein.jetpackcompose.ui.theme.JetpackComposeTheme
@@ -85,6 +87,13 @@ class MainActivity : ComponentActivity() {
             !splashViewModel.isLoading.value
         }
         setContent {
+            var selected by remember {
+                mutableStateOf(false)
+            }
+            var selected2 by remember {
+                mutableStateOf(false)
+            }
+
             JetpackComposeTheme { //JetpackComposeTheme -->Compose of AppName+"Theme" word
                 // A surface container using the 'background' color from the theme
                 Surface(
@@ -139,6 +148,21 @@ class MainActivity : ComponentActivity() {
                    /* Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center){
                         CircularImage()
                     }*/
+
+                    //Selectable item compose
+                    Column(modifier = Modifier.fillMaxSize().padding(80.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+
+                        SelectableItem(selected = selected, title = "Hussein Kamal", onClick = {
+                            selected = !selected
+                        })
+                        Spacer(modifier = Modifier.height(10.dp))
+                        SelectableItem(selected = selected, title = "Android Developer", onClick = {
+                            selected = !selected
+                        })
+                    }
                 }
 
                 //Change system bar colors
@@ -149,10 +173,13 @@ class MainActivity : ComponentActivity() {
                            color = if(darkTheme) Color.LightGray else Teal200
                        )
                    }*/
-                val screen by splashViewModel.startDestination
+              /*  val screen by splashViewModel.startDestination
                 val navController = rememberNavController()
-                SetupNavGraphOnboarding(navController = navController, startDestination = screen)
+                SetupNavGraphOnboarding(navController = navController, startDestination = screen)*/
+                
+                //LoadingAnimation()//Add animation loading compose
 
+                //Swipe library --> https://github.com/saket/swipe
             }
         }
     }
