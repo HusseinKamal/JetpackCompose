@@ -57,6 +57,7 @@ import com.google.accompanist.pager.ExperimentalPagerApi
 import com.hussein.jetpackcompose.OnboardingApp.navigation.SetupNavGraphOnboarding
 import com.hussein.jetpackcompose.OnboardingApp.viewmodel.SplashViewModel
 import com.hussein.jetpackcompose.component.CustomProgressComponent
+import com.hussein.jetpackcompose.component.DecoupledConstraintLayout
 import com.hussein.jetpackcompose.component.LoadingAnimation
 import com.hussein.jetpackcompose.component.SelectableItem
 import com.hussein.jetpackcompose.pagingapp.navigation.NavGraphPaging
@@ -149,6 +150,7 @@ class MainActivity : ComponentActivity() {
                         CircularImage()
                     }*/
 
+                    /*
                     //Selectable item compose
                     Column(modifier = Modifier.fillMaxSize().padding(80.dp),
                         horizontalAlignment = Alignment.CenterHorizontally,
@@ -162,7 +164,8 @@ class MainActivity : ComponentActivity() {
                         SelectableItem(selected = selected, title = "Android Developer", onClick = {
                             selected = !selected
                         })
-                    }
+                    }*/
+                    DecoupledConstraintLayout()
                 }
 
                 //Change system bar colors
@@ -180,6 +183,7 @@ class MainActivity : ComponentActivity() {
                 //LoadingAnimation()//Add animation loading compose
 
                 //Swipe library --> https://github.com/saket/swipe
+
             }
         }
     }

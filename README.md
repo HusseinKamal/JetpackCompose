@@ -4,4 +4,5 @@ This is JetpackCompose example app with many composable views in "component" pac
 2-Simple OnBoarding Splash App with DataStore library
 3-Add animation loading compose 
 4-Selectable item compose
+5-Support multiple screen sizes
 
