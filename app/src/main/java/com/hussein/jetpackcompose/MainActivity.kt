@@ -17,6 +17,7 @@ import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccessTime
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.*
@@ -24,10 +25,13 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Color.Companion.Gray
+import androidx.compose.ui.graphics.Color.Companion.Green
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
@@ -54,12 +58,10 @@ import coil.request.ImageRequest
 import coil.transform.CircleCropTransformation
 import coil.transform.RoundedCornersTransformation
 import com.google.accompanist.pager.ExperimentalPagerApi
+import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.hussein.jetpackcompose.OnboardingApp.navigation.SetupNavGraphOnboarding
 import com.hussein.jetpackcompose.OnboardingApp.viewmodel.SplashViewModel
-import com.hussein.jetpackcompose.component.CustomProgressComponent
-import com.hussein.jetpackcompose.component.DecoupledConstraintLayout
-import com.hussein.jetpackcompose.component.LoadingAnimation
-import com.hussein.jetpackcompose.component.SelectableItem
+import com.hussein.jetpackcompose.component.*
 import com.hussein.jetpackcompose.pagingapp.navigation.NavGraphPaging
 import com.hussein.jetpackcompose.search.MainViewModel
 import com.hussein.jetpackcompose.ui.theme.JetpackComposeTheme
@@ -71,6 +73,7 @@ import javax.inject.Inject
 @ExperimentalCoilApi
 @ExperimentalAnimationApi
 @ExperimentalPagerApi
+@ExperimentalPermissionsApi
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
@@ -165,7 +168,26 @@ class MainActivity : ComponentActivity() {
                             selected = !selected
                         })
                     }*/
-                    DecoupledConstraintLayout()
+                    //DecoupledConstraintLayout()
+                    //RequestPermission(permission= android.Manifest.permission.READ_CONTACTS)
+                    /*MultipleRequestPermission(permissions = listOf(
+                        android.Manifest.permission.READ_CONTACTS,
+                        android.Manifest.permission.CAMERA
+                    ))*/
+                    //Icon(imageVector = Icons.Default.AccessTime , contentDescription = "Icon test" )
+                    HyperlinkText(
+                        fullText = "By using our services are agreeing to our\n" + "Terms and Privacy statement",
+                        hyperLinks = mutableMapOf(
+                            "Terms" to "https://google.com",
+                            "Privacy statement" to "https://google.com"
+                        ),
+                        textStyle = TextStyle(
+                            textAlign = TextAlign.Center,
+                            color = Gray
+                        ),
+                        linkTextColor = Color.Blue,
+                        fontSize = 18.sp
+                    )
                 }
 
                 //Change system bar colors

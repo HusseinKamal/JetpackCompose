@@ -118,5 +118,10 @@ dependencies {
     // DataStore Preferences
     implementation("androidx.datastore:datastore-preferences:1.0.0")
 
+    //Permissions
+    implementation "com.google.accompanist:accompanist-permissions:0.31.2-alpha"
+
+    //Material Icons
+    implementation "androidx.compose.material:material-icons-extended:$compose_ui_version"
 
 }
