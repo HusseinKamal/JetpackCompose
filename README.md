@@ -8,4 +8,8 @@ This is JetpackCompose example app with many composable views in "component" pac
 6-Permission in jetpack compose
 7- Material Icons library
 8-HyperLink Text Compose
+9-Root navigation bottom bar
+10-Webview with jetpack compose
+11-Text Animation
+12-Hexa Color
 

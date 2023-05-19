@@ -2,6 +2,7 @@ package com.hussein.jetpackcompose.ui.theme
 
 import androidx.compose.material.Colors
 import androidx.compose.ui.graphics.Color
+import com.hussein.jetpackcompose.color
 
 val Purple200 = Color(0xFFBB86FC)
 val Purple500 = Color(0xFF6200EE)
@@ -16,3 +17,6 @@ val Colors.topAppBarContentColor: Color
 
 val Colors.topAppBarBackgroundColor: Color
     get() = if(isLight) Purple500 else Color.Black
+
+val Colors.hexaColor: Color
+    get() = if(isLight) "#FF0055".color else Color.Black

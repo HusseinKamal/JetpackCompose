@@ -5,6 +5,7 @@ buildscript {
         nav_version = "2.5.3"
         compose_version = '1.1.0'
         accompanist_version = '0.24.2-alpha'
+        accompanist_compose ='0.31.2-alpha'
     }
 }// Top-level build file where you can add configuration options common to all sub-projects/modules.
 plugins {

@@ -2,6 +2,7 @@
 
 package com.hussein.jetpackcompose
 
+import android.graphics.Color.parseColor
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -62,11 +63,15 @@ import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.hussein.jetpackcompose.OnboardingApp.navigation.SetupNavGraphOnboarding
 import com.hussein.jetpackcompose.OnboardingApp.viewmodel.SplashViewModel
 import com.hussein.jetpackcompose.component.*
+import com.hussein.jetpackcompose.component.webview.MainScreenWebView
+import com.hussein.jetpackcompose.navigationroot.graphs.RootNavigationGraph
 import com.hussein.jetpackcompose.pagingapp.navigation.NavGraphPaging
 import com.hussein.jetpackcompose.search.MainViewModel
+import com.hussein.jetpackcompose.textanimation.TextAnimScreen
 import com.hussein.jetpackcompose.ui.theme.JetpackComposeTheme
 import com.hussein.jetpackcompose.ui.theme.Typography
 import dagger.hilt.android.AndroidEntryPoint
+import java.lang.reflect.Array.get
 import javax.inject.Inject
 
 @ExperimentalPagingApi
@@ -168,14 +173,14 @@ class MainActivity : ComponentActivity() {
                             selected = !selected
                         })
                     }*/
-                    //DecoupledConstraintLayout()
+                    //DscecoupledConstraintLayout()
                     //RequestPermission(permission= android.Manifest.permission.READ_CONTACTS)
                     /*MultipleRequestPermission(permissions = listOf(
                         android.Manifest.permission.READ_CONTACTS,
                         android.Manifest.permission.CAMERA
                     ))*/
                     //Icon(imageVector = Icons.Default.AccessTime , contentDescription = "Icon test" )
-                    HyperlinkText(
+                 /*   HyperlinkText(
                         fullText = "By using our services are agreeing to our\n" + "Terms and Privacy statement",
                         hyperLinks = mutableMapOf(
                             "Terms" to "https://google.com",
@@ -187,7 +192,10 @@ class MainActivity : ComponentActivity() {
                         ),
                         linkTextColor = Color.Blue,
                         fontSize = 18.sp
-                    )
+                    )*/
+                    //RootNavigationGraph(navController = rememberNavController())
+                    //MainScreenWebView()
+                    TextAnimScreen()
                 }
 
                 //Change system bar colors
@@ -613,3 +621,5 @@ fun DefaultPreview() {
         NavGraphPaging(navHostController = navController)
     }
 }
+val String.color
+    get()= Color(parseColor(this))
