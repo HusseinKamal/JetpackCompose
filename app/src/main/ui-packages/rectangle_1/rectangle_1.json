@@ -1,0 +1,93 @@
+{
+  "name": "rectangle_1",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "2B2qPLWto942U3xSm75rk3",
+    "node": "1:9",
+    "version": "3528800451",
+    "component-id": "4884b3d17ddd6fd0787a5665f55ab54f780f585e"
+  },
+  "default": "Rectangle 1",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "group",
+        "id": "Rectangle 1"
+      }
+    ],
+    "modes": {
+      "Rectangle 1": {
+        "rules": [
+          {
+            "id": "top_level",
+            "tap-handler": "$OnClick",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "shrink"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink"
+              }
+            },
+            "arrangement": "row",
+            "main-axis-align": "start",
+            "cross-axis-align": "start",
+            "children": [
+              "Rectangle 1"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Rectangle 1",
+            "padding": "10.0",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "shrink",
+                "min": "378.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "shrink",
+                "min": "224.0"
+              }
+            },
+            "arrangement": "row",
+            "main-axis-align": "start",
+            "cross-axis-align": "start",
+            "item-spacing": "10.0",
+            "background-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "1.0",
+              "value": "0.9803921568627451"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "OnClick": {
+      "data-type": "void-callback",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Rectangle 1",
+      "size": {
+        "width": 378.0,
+        "height": 224.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

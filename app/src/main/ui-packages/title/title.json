@@ -1,0 +1,82 @@
+{
+  "name": "title",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "2B2qPLWto942U3xSm75rk3",
+    "node": "1:10",
+    "version": "3528800451",
+    "component-id": "c3a718854dc9db7614c59728a9f412d246bdd69f"
+  },
+  "default": "Title",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      }
+    ],
+    "modes": {
+      "Title": {
+        "rules": [
+          {
+            "id": "top_level",
+            "is-structured": "false",
+            "children": "$Title",
+            "clip-content": "false"
+          }
+        ]
+      }
+    }
+  },
+  "parameters": {
+    "Title": {
+      "data-type": "list-item",
+      "required": false,
+      "description": ""
+    }
+  },
+  "previews": [
+    {
+      "design": "Title",
+      "size": {
+        "width": 146.0,
+        "height": 20.0
+      },
+      "parameters": {
+        "Title": [
+          {
+            "type": "text",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "proportional",
+                "value": 1.0
+              },
+              "height-constraints": {
+                "sizing-mode": "proportional",
+                "value": 1.0
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "Title",
+            "overflow": "visible",
+            "max-lines": -1,
+            "text-align": "left",
+            "text-size": 20.0,
+            "line-height": 1.2102272033691406,
+            "typeface": "Inter"
+          }
+        ]
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}

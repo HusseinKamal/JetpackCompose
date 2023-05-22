@@ -5,6 +5,7 @@ plugins {
     id 'com.google.dagger.hilt.android'
     id 'kotlinx-serialization'
     id 'kotlin-parcelize'
+    id 'com.google.relay'
     id 'kotlin-kapt' //Should be at end of plugins
 }
 
@@ -22,6 +23,13 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
+        }
+        sourceSets {
+            main {
+                assets{
+                    srcDir('src/main/ui-packages')
+                }
+            }
         }
 
         buildConfigField("String" ,"API_KEY",API_KEY)
@@ -126,5 +134,8 @@ dependencies {
 
     //WebView
     implementation "com.google.accompanist:accompanist-webview:$accompanist_compose"
+
+    //Color picker
+    implementation("com.github.skydoves:colorpicker-compose:1.0.2")
 
 }

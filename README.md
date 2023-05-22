@@ -12,4 +12,9 @@ This is JetpackCompose example app with many composable views in "component" pac
 10-Webview with jetpack compose
 11-Text Animation
 12-Hexa Color
+13-Color picker and Image Color Picker
+14-LazyList for lazy column scroll state
+15-Animation for TopBar with lazy column
+16-Image Picker
+17-Add Relay for Android Studio plugin to use with Figma design
 

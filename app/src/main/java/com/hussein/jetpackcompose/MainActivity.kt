@@ -195,7 +195,12 @@ class MainActivity : ComponentActivity() {
                     )*/
                     //RootNavigationGraph(navController = rememberNavController())
                     //MainScreenWebView()
-                    TextAnimScreen()
+                    //TextAnimScreen()
+                    //ColorPicker()
+                    //ImageColorPicker()
+                    //LazyList()
+                    //AnimationTopBar()
+                    ImagePicker()
                 }
 
                 //Change system bar colors
@@ -617,8 +622,9 @@ fun DefaultPreview() {
         //LazyColumnComposable()
         //CountLimitTextFieldComposable()
         //CustomProgressComposeExample()
-        val navController = rememberNavController()
-        NavGraphPaging(navHostController = navController)
+      /*  val navController = rememberNavController()
+        NavGraphPaging(navHostController = navController)*/
+        ColorPicker()
     }
 }
 val String.color
