@@ -12,6 +12,11 @@ val Teal200 = Color(0xFF03DAC5)
 val color1 = Color(0xFF642b73)
 val color2 = Color(0xFFc6426e)
 
+val Blue = Color(0xFF167AF6)
+val Red = Color(0xFFe93560)
+val Dark = Color(0xFF0E0D1D)
+val Light = Color(0xFF17162B)
+
 val Colors.topAppBarContentColor: Color
     get() = if(isLight) Color.White else Color.LightGray
 

@@ -2,10 +2,17 @@
 
 package com.hussein.jetpackcompose
 
+import android.content.ComponentName
+import android.content.Context
+import android.content.Intent
+import android.content.ServiceConnection
 import android.graphics.Color.parseColor
 import android.os.Bundle
+import android.os.IBinder
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.*
@@ -67,6 +74,8 @@ import com.hussein.jetpackcompose.component.webview.MainScreenWebView
 import com.hussein.jetpackcompose.navigationroot.graphs.RootNavigationGraph
 import com.hussein.jetpackcompose.pagingapp.navigation.NavGraphPaging
 import com.hussein.jetpackcompose.search.MainViewModel
+import com.hussein.jetpackcompose.stopwatch.StopWatch
+import com.hussein.jetpackcompose.stopwatch.service.StopwatchService
 import com.hussein.jetpackcompose.textanimation.TextAnimScreen
 import com.hussein.jetpackcompose.ui.theme.JetpackComposeTheme
 import com.hussein.jetpackcompose.ui.theme.Typography
@@ -89,6 +98,43 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var splashViewModel: SplashViewModel
 
+  /*  private var isBound by mutableStateOf(false)
+    private lateinit var stopwatchService: StopwatchService
+    private val connection = object : ServiceConnection {
+        override fun onServiceConnected(className: ComponentName, service: IBinder) {
+            val binder = service as StopwatchService.StopwatchBinder
+            stopwatchService = binder.getService()
+            isBound = true
+        }
+
+        override fun onServiceDisconnected(arg0: ComponentName) {
+            isBound = false
+        }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Intent(this, StopwatchService::class.java).also { intent ->
+            bindService(intent, connection, Context.BIND_AUTO_CREATE)
+        }
+    }
+
+    private fun requestPermissions(vararg permissions: String) {
+        val requestPermissionLauncher = registerForActivityResult(
+            ActivityResultContracts.RequestMultiplePermissions()
+        ) { result ->
+            result.entries.forEach {
+                Log.d("MainActivity", "${it.key} = ${it.value}")
+            }
+        }
+        requestPermissionLauncher.launch(permissions.asList().toTypedArray())
+    }
+
+    override fun onStop() {
+        super.onStop()
+        unbindService(connection)
+        isBound = false
+    }*/
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -200,7 +246,7 @@ class MainActivity : ComponentActivity() {
                     //ImageColorPicker()
                     //LazyList()
                     //AnimationTopBar()
-                    ImagePicker()
+                    //ImagePicker()
                 }
 
                 //Change system bar colors
@@ -219,8 +265,14 @@ class MainActivity : ComponentActivity() {
 
                 //Swipe library --> https://github.com/saket/swipe
 
+                //StopWatch
+               /* if (isBound) {
+                    StopWatch(stopwatchService = stopwatchService)
+                }*/
+
             }
         }
+        //requestPermissions(android.Manifest.permission.POST_NOTIFICATIONS)
     }
 }
 
