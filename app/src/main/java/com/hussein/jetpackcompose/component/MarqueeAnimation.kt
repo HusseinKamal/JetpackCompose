@@ -1,4 +1,3 @@
-@file:OptIn(ExperimentalFoundationApi::class)
 
 package com.hussein.jetpackcompose.component
 
@@ -18,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
+@ExperimentalFoundationApi
 fun MarqueeAnimation(){
     val focusRequester = remember {
         FocusRequester()
