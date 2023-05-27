@@ -138,16 +138,16 @@ class MainActivity : ComponentActivity() {
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen().setKeepOnScreenCondition {
+       /* installSplashScreen().setKeepOnScreenCondition {
             !splashViewModel.isLoading.value
-        }
+        }*/
         setContent {
-            var selected by remember {
+           /* var selected by remember {
                 mutableStateOf(false)
             }
             var selected2 by remember {
                 mutableStateOf(false)
-            }
+            }*/
 
             JetpackComposeTheme { //JetpackComposeTheme -->Compose of AppName+"Theme" word
                 // A surface container using the 'background' color from the theme
@@ -247,6 +247,7 @@ class MainActivity : ComponentActivity() {
                     //LazyList()
                     //AnimationTopBar()
                     //ImagePicker()
+                    MarqueeAnimation()
                 }
 
                 //Change system bar colors

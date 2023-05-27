@@ -18,4 +18,5 @@ This is JetpackCompose example app with many composable views in "component" pac
 16-Image Picker   #####
 17-Add Relay for Android Studio plugin to use with Figma design   #####
 18-Stop watch app   #####
+19-Add Marquee Animation  #####
 
