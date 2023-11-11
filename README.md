@@ -57,6 +57,21 @@ These are smaples of screenshots
 ![shimmer](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/aeee2bc2-96d0-42be-9167-2dbebb682e03)
 ![circularimage](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/b84fa1a1-2816-4362-b795-eaf4d9e3dda9)
 
+[visible.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/73b73715-f5bf-48ee-91b4-5425c41d0951)
+
+![webview](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/b7dd2cd1-93ff-421e-b618-54ec46b79f18)
+![tabs](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/b3d149f7-d1ec-4ca3-947e-dfed5f026d87)
+![linkabletext](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/850a5c25-3bc7-4914-b3d2-36d843120ca1)
+
+[textanim.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/3c590957-50ec-4ecb-bd94-c58641e96018)
+
+[colorpicker.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/5087a49b-c324-4976-b690-db573fa94c62)
+
+[topbar.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/a937b4de-3caa-49f2-b5be-fed7945fea96)
+
+![imagepicker](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/db612163-8e8b-4535-a0ed-e6c68c91225b)
+
+[loadinganim.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/45d97261-b763-4851-abb9-a69cfe97a4ad)
 
 
 
