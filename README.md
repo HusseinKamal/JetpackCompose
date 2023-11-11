@@ -39,4 +39,13 @@ This is JetpackCompose example app with many composable views in "component" pac
 
 19-Add Marquee Animation 
 
+These are smaples of screenshots 
+
+[splashvideo.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/28bfdfa0-0621-4305-83f9-3aade50d0d57)
+![expandCard](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/da8bf17c-1747-4afd-b05c-3064e7e349f3)
+![img1](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/fa8227d0-b8ff-4503-a3a2-e3e512737459)
+![googlebutton](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/4a624820-4097-4dbe-a2d4-01bb7386b41b)
+
+
+
 
