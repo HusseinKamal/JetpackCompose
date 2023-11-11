@@ -73,6 +73,7 @@ These are smaples of screenshots
 
 [loadinganim.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/45d97261-b763-4851-abb9-a69cfe97a4ad)
 
+[stopwatch.webm](https://github.com/HusseinKamal/JetpackCompose/assets/29864161/d948f671-cb5e-4637-bba5-0b783ed0b6c3)
 
 
 
