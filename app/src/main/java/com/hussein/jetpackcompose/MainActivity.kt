@@ -74,6 +74,7 @@ import com.hussein.jetpackcompose.component.webview.MainScreenWebView
 import com.hussein.jetpackcompose.navigationroot.graphs.RootNavigationGraph
 import com.hussein.jetpackcompose.pagingapp.navigation.NavGraphPaging
 import com.hussein.jetpackcompose.search.MainViewModel
+import com.hussein.jetpackcompose.search.SearchMainScreen
 import com.hussein.jetpackcompose.stopwatch.StopWatch
 import com.hussein.jetpackcompose.stopwatch.service.StopwatchService
 import com.hussein.jetpackcompose.textanimation.TextAnimScreen
@@ -98,7 +99,7 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var splashViewModel: SplashViewModel
 
-  /*  private var isBound by mutableStateOf(false)
+    private var isBound by mutableStateOf(false)
     private lateinit var stopwatchService: StopwatchService
     private val connection = object : ServiceConnection {
         override fun onServiceConnected(className: ComponentName, service: IBinder) {
@@ -134,7 +135,7 @@ class MainActivity : ComponentActivity() {
         super.onStop()
         unbindService(connection)
         isBound = false
-    }*/
+    }
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -142,12 +143,12 @@ class MainActivity : ComponentActivity() {
             !splashViewModel.isLoading.value
         }*/
         setContent {
-           /* var selected by remember {
+            var selected by remember {
                 mutableStateOf(false)
             }
             var selected2 by remember {
                 mutableStateOf(false)
-            }*/
+            }
 
             JetpackComposeTheme { //JetpackComposeTheme -->Compose of AppName+"Theme" word
                 // A surface container using the 'background' color from the theme
@@ -164,7 +165,7 @@ class MainActivity : ComponentActivity() {
                         .width(500.dp)
                         .height(500.dp)
                         .background(Color.LightGray),
-                        horizontalAlignment = Alignment.CenterHorizontally,
+                        horizontalAlignment = Alignment.CenterHorizontally,`
                     ) {
                         CustomItem(weight = 3f, color =MaterialTheme.colors.primary)
                         CustomItem(weight = 1f, color =MaterialTheme.colors.secondary)
@@ -204,7 +205,7 @@ class MainActivity : ComponentActivity() {
                         CircularImage()
                     }*/
 
-                    /*
+/*
                     //Selectable item compose
                     Column(modifier = Modifier.fillMaxSize().padding(80.dp),
                         horizontalAlignment = Alignment.CenterHorizontally,
@@ -247,7 +248,7 @@ class MainActivity : ComponentActivity() {
                     //LazyList()
                     //AnimationTopBar()
                     //ImagePicker()
-                    MarqueeAnimation()
+                    //MarqueeAnimation()
                 }
 
                 //Change system bar colors
@@ -267,9 +268,9 @@ class MainActivity : ComponentActivity() {
                 //Swipe library --> https://github.com/saket/swipe
 
                 //StopWatch
-               /* if (isBound) {
+                if (isBound) {
                     StopWatch(stopwatchService = stopwatchService)
-                }*/
+                }
 
             }
         }

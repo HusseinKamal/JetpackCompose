@@ -34,7 +34,7 @@ fun MarqueeAnimation(){
                 .basicMarquee(
                     iterations = Int.MAX_VALUE,
                     initialDelayMillis = 0,
-                    //animationMode = MarqueeAnimationMode.WhileFocused,
+                    animationMode = MarqueeAnimationMode.WhileFocused,
                     delayMillis = 0,
                     velocity = 100.dp
                 )
