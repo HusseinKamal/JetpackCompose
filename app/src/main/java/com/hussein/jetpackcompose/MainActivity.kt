@@ -99,7 +99,7 @@ class MainActivity : ComponentActivity() {
     @Inject
     lateinit var splashViewModel: SplashViewModel
 
-    private var isBound by mutableStateOf(false)
+/*    private var isBound by mutableStateOf(false)
     private lateinit var stopwatchService: StopwatchService
     private val connection = object : ServiceConnection {
         override fun onServiceConnected(className: ComponentName, service: IBinder) {
@@ -135,7 +135,7 @@ class MainActivity : ComponentActivity() {
         super.onStop()
         unbindService(connection)
         isBound = false
-    }
+    }*/
     @ExperimentalMaterialApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -268,9 +268,12 @@ class MainActivity : ComponentActivity() {
                 //Swipe library --> https://github.com/saket/swipe
 
                 //StopWatch
-                if (isBound) {
+               /* if (isBound) {
                     StopWatch(stopwatchService = stopwatchService)
-                }
+                }*/
+
+                val navController = rememberNavController()
+                NavGraphPaging(navHostController = navController)
 
             }
         }
@@ -676,9 +679,9 @@ fun DefaultPreview() {
         //LazyColumnComposable()
         //CountLimitTextFieldComposable()
         //CustomProgressComposeExample()
-      /*  val navController = rememberNavController()
+        /*val navController = rememberNavController()
         NavGraphPaging(navHostController = navController)*/
-        ColorPicker()
+        //ColorPicker()
     }
 }
 val String.color
